@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
-public class ConnectionPhoton : MonoBehaviour
+public class ConnectionPhoton : MonoBehaviourPunCallbacks
 {
     [SerializeField]
     QuickStartLobbyController quickStartLobby;
@@ -11,5 +11,9 @@ public class ConnectionPhoton : MonoBehaviour
     {
         PhotonNetwork.ConnectUsingSettings();
     }
-
+    public override void OnConnectedToMaster()
+    {
+        Debug.Log($"Connected to {PhotonNetwork.CloudRegion} server");
+        quickStartLobby.QuickStart();
+    }
 }
