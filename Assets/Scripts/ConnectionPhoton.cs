@@ -4,16 +4,12 @@ using UnityEngine;
 using Photon.Pun;
 public class ConnectionPhoton : MonoBehaviour
 {
-    
-    // Start is called before the first frame update
+    [SerializeField]
+    QuickStartLobbyController quickStartLobby;
+
     void Start()
     {
-        
+        PhotonNetwork.ConnectUsingSettings();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
