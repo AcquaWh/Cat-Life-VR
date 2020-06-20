@@ -12,6 +12,9 @@ public class ConnectionPhoton : MonoBehaviourPunCallbacks
     public Button ConnectButton;
     public Button JoinRandomButton;
     public Text Log;
+    public Text PlayerCount;
+    public int playersCount;
+
     public byte maxPlayersPerRoom = 4;
 
     public void Connect()
@@ -20,10 +23,10 @@ public class ConnectionPhoton : MonoBehaviourPunCallbacks
         {
             if (PhotonNetwork.ConnectUsingSettings())
             {
-                Log.text += "\nConnected to Server";
+                Log.text = "Connected to Server";
             } else
             {
-                Log.text += "\nFailing Connecting to Server";
+                Log.text = "Failing Connecting to Server";
             }
         }
     }
@@ -35,24 +38,34 @@ public class ConnectionPhoton : MonoBehaviourPunCallbacks
     }
     public void JoinRandom()
     {
-        if (PhotonNetwork.JoinRandomRoom())
+        if (!PhotonNetwork.JoinRandomRoom())
         {
-            Log.text += "\nJoinned Room";
-        } else
-        {
-            Log.text += "\nFail Joining";
+            Log.text = "Fail Joining";
         }
     }
 
     public override void OnJoinRandomFailed(short returnCode, string message)
     {
-        Log.text += "\nNo Rooms to Join, creating one...";
+        Log.text = "No Rooms to Join, creating one...";
         if(PhotonNetwork.CreateRoom(null, new Photon.Realtime.RoomOptions() { MaxPlayers = maxPlayersPerRoom }))
         {
-            Log.text += "\nRoom Created";
+            Log.text = "Room Created";
         } else
         {
-            Log.text += "\nFail Creating Room";
+            Log.text = "Fail Creating Room";
         }
+    }
+    public override void OnJoinedRoom()
+    {
+        Log.text = "Joinned";
+        JoinRandomButton.interactable = false;
+    }
+    private void FixedUpdate()
+    {
+        if(PhotonNetwork.CurrentRoom != null)
+
+            playersCount = PhotonNetwork.CurrentRoom.PlayerCount;
+            PlayerCount.text = playersCount + "/" + maxPlayersPerRoom;
+  
     }
 }
