@@ -18,7 +18,6 @@ public class ConnectionPhoton : MonoBehaviourPunCallbacks
     {
         if (!PhotonNetwork.IsConnected)
         {
-            Log.text = "\nConnected to Server";
             if (PhotonNetwork.ConnectUsingSettings())
             {
                 Log.text += "\nConnected to Server";
