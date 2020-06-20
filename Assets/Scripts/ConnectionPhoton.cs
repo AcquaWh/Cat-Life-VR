@@ -16,7 +16,8 @@ public class ConnectionPhoton : MonoBehaviourPunCallbacks
     public int playersCount;
 
     public byte maxPlayersPerRoom = 4;
-
+    public byte minPlayersPerRoom = 2;
+    private bool IsLoading = false;
     public void Connect()
     {
         if (!PhotonNetwork.IsConnected)
@@ -66,6 +67,15 @@ public class ConnectionPhoton : MonoBehaviourPunCallbacks
 
             playersCount = PhotonNetwork.CurrentRoom.PlayerCount;
             PlayerCount.text = playersCount + "/" + maxPlayersPerRoom;
-  
+
+        if(IsLoading == false && playersCount >= minPlayersPerRoom)
+        {
+            LoadMap();
+        }
+    }
+    private void LoadMap()
+    {
+        IsLoading = true;
+        PhotonNetwork.LoadLevel("Game");
     }
 }
