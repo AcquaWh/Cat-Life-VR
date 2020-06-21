@@ -26,6 +26,6 @@ public class GyroRotate : MonoBehaviour
 
     void OnGUI()
     {
-        GUILayout.Label("Gyroscope attitude : " + gyro.attitude);
+        
     }
 }
