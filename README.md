@@ -32,6 +32,8 @@ Clona el repositorio de GitHub en cualquier carpeta dentro de tu computadora
 
 ## Objetivo
 
+## Desarrollo
+
 ## Licencia
 Entra a este [enlace](https://github.com/AcquaWh/VR-Multiplayer/blob/master/LICENSE) para ver la licencia del proyecto.
 
