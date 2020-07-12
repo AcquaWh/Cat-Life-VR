@@ -11,7 +11,7 @@ Cat Life VR es una simulación en realidad virtual donde eres un gato que sobrev
 
 Clona el repositorio de GitHub en cualquier carpeta dentro de tu computadora
 
-    git clone https://github.com/AcquaWh/VR-Multiplayer.git
+    git clone https://github.com/AcquaWh/Cat-Life-VR.git
     
 ## Paquetes instalados
 
