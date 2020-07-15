@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
     [SerializeField]
     Transform vrCamera;
     [SerializeField]
-    float toggleAngle = 30.0f;
+    float toggleAngle = 15.0f;
     public Animator animacion;
     private CharacterController cc;
     void Start()

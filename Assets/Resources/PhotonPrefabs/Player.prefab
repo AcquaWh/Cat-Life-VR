@@ -245,7 +245,7 @@ MonoBehaviour:
   rotSpeed: 150
   cam: {fileID: 75499026804410213}
   vrCamera: {fileID: 75499026804410212}
-  toggleAngle: 30
+  toggleAngle: 15
   animacion: {fileID: 8394909220132968738}
 --- !u!143 &361391124290413200
 CharacterController:
