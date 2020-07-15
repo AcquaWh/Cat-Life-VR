@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
+using TMPro;
 public class ConnectionPhoton : MonoBehaviourPunCallbacks
 {
     /*
@@ -11,8 +12,8 @@ public class ConnectionPhoton : MonoBehaviourPunCallbacks
     */
     public Button ConnectButton;
     public Button JoinRandomButton;
-    public Text Log;
-    public Text PlayerCount;
+    public TextMeshProUGUI Log;
+    public TextMeshProUGUI PlayerCount;
     public int playersCount;
 
     public byte maxPlayersPerRoom = 4;
