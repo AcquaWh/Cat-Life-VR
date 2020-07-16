@@ -81,7 +81,7 @@ Google Cardboard son unas gafas de realidad virtual que estan hechas con cartón
 
 - Se crearon las primeras escena, en la que vendra el menu y la sala multijugador.
 
-- Utilizando la tienda de assets de Unity [enlace](https://assetstore.unity.com/) se descargaron los primeros recursos que fueron las frutas en 3D y el gato que se ve en escena.
+- Utilizando la tienda de assets de Unity ([enlace](https://assetstore.unity.com/)) se descargaron los primeros recursos que fueron las frutas en 3D y el gato que se ve en escena.
 
 
 
