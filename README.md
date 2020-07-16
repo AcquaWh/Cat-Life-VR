@@ -7,7 +7,7 @@
 - [Paquetes instalados](#paquetes-instalados)
 - [Introducción](#introducción)
 - [Objetivo](#objetivo)
-- [Objetivos-específicos](#objetivos-específicos)
+- [Objetivos específicos](#objetivos-específicos)
 - [Alcance](#alcance)
 - [Dispositivo](#dispositivo)
 - [Desarrollo](#desarrollo)
