@@ -8,4 +8,8 @@ public class End : MonoBehaviour
     {
         SceneManager.LoadScene("Home");
     }
+    public void Exitgame()
+    {
+        Application.Quit();
+    }
 }
