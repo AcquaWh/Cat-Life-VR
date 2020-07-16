@@ -109,7 +109,7 @@ Como dispostivo de control utilizaremos otro smartphone que simulara un control 
 
 
 
-
+### Configuración de proyecto en Unity
 Se empezo un proyecto nuevo en 3D en Unity (versión 2019.3.0f6) en donde se importaron los paquetes de GoogleVR desde este [enlace](https://developers.google.com/vr/develop/unity/get-started-android) en la carpeta de Assets.
 
 Se crearon las primeras escena, en la que vendra el menu y la sala multijugador.
