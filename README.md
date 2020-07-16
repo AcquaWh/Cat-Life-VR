@@ -40,9 +40,18 @@ Clona el repositorio de GitHub en cualquier carpeta dentro de tu computadora
 ## Introducción
 La aplicación de nuevas tecnologías dentro de las escuelas y universidades se esta haciendo más habitual, más ahora por la situación que nuestro mundo esta logrando superar haciendo referencia al COVID19. Ya existen herramientas como Zoom, Skype, Discord entre otras para mantenerte comunicado en el ambito laboral y estudiantil sin estar presencialmente dentro de las instalaciones de tu empresa y universidad.
 
+Con el paso del tiempo, se ha incrementado en las computadoras la velocidad de procesamiento, con mayor capacidad de gráficos y de reproducción de sonido. Esto ha
+permitido que muy recientemente la tecnología de realidad virtual pueda utilizarse en el proceso enseñanza-aprendizaje, ya que requiere de cierta velocidad de procesamiento en
+una PC, respetable cantidad de memoria y una tarjeta de video con aceleración gráfica.
+
+Google en su presentación anual de Google I/O 2014, presenta una caja de cartón que transforma el celular en unas gafas de realidad virtual, el proyecto Cardboard tiene como
+objetivo desarrollar la realidad virtual (VR) herramientas de bajo costo para que todos puedan disfrutar VR de manera sencilla, divertida y natural, es tanto así que uno mismo
+puede construir estas gafas, el proceso de construcción de unas CardBoard puede resultar relativamente sencillo y se puede completar en unos 15 o 20 minutos.
+
+El presente trabajo propone presentar el desarrollo de un videojuego educativo en realidad virtual desarrollado con Google Cardboard, que pueda colaborar con la enseñanza en los kindergarden y primarias para que enseñen a los niños a sumar y restar con el fin de motivar a los alumnos a aprender de forma divertida aumentando su interes por la clase de matematicas.
 
 ## Objetivo
-
+ 
 
 ## Desarrollo
 
