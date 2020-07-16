@@ -149,7 +149,7 @@ Una vez pulsado **Player Settings** deberemos de modificar algunos aspectos desd
 
 Una vez configurados estos parámetros ya tendremos preparado el proyecto con todo lo básico para empezar con nuestro desarrollo.
 
-### Procesos de programación
+### Acomodo de Google VR y diseño de UI
 
 Se crearon las escenas, en la que vendrá el menú, la sala multijugador, cuando pierdes y ganas.
 
@@ -190,6 +190,171 @@ Importamos una imagen en el panel de la derecha que sea un Sprite 2D en Source I
 
 ![img](https://i.ibb.co/c30RpJd/banana.png)
 
+### Configuración Photon
+Se crea un **Empty** en el Hierarchy y en Add Component escribes Connection Photon (Script)
+
+![img](https://i.ibb.co/MG8h6Dv/script.png)
+
+En **Connect Button** se arrastra el botón que creamos de Comenzar y el **Join Random Button** el de unirte a la sala de el Canvas que acabamos de crear.
+También ponemos el número máximo de jugadores por cuarto y mínimo.
+
+Dentro del archivo C# va a estar este código:
+El MonoBehauviour para hacer llamadas a Photon Pun y también usando la librería Photon.Pum y el TMPro para llamar a los TextMesh botones y textos.
+
+Este archivo se llamará ConnectionPhoton.cs
+
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+    using UnityEngine.UI;
+    using Photon.Pun;
+    using TMPro;
+    public class ConnectionPhoton : MonoBehaviourPunCallbacks
+    {
+        public Button ConnectButton;
+        public Button JoinRandomButton;
+        public TextMeshProUGUI Log;
+        public TextMeshProUGUI PlayerCount;
+        public int playersCount;
+    
+        public byte maxPlayersPerRoom = 4;
+        public byte minPlayersPerRoom = 2;
+        private bool IsLoading = false;
+        
+Para hacer la función de conectar a un servidor multijugador se tiene que correr este código que lo que hace es revisar si el usuario esta conectado, si no, en el Texto llamado Log despliega un error o alerta.
+
+    public void Connect()
+    {
+        if (!PhotonNetwork.IsConnected)
+        {
+            if (PhotonNetwork.ConnectUsingSettings())
+            {
+                Log.text = "Connected to Server";
+            } else
+            {
+                Log.text = "Failing Connecting to Server";
+            }
+        }
+    }
+
+
+### Escena multijugador
+Antes de todo se debe hacer un código en esta escena multijugador que haga aparecer al usuario con el player prefabricado, creando al jugador en esa escena. Se hizo un objeto vació y dentro como componente se creo un archivo llamado GameSetupController.cs
+
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+    using System.IO;
+    using Photon.Pun;
+    
+    public class GameSetupController : MonoBehaviour
+    {
+        [SerializeField]
+        Transform camtransform;
+        void Start()
+        {
+            createPlayer();
+        }
+    
+        void createPlayer()
+        {
+            PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Player"), Vector3.zero, Quaternion.identity);
+        }
+    }
+
+Los usuarios van juntando entre todos frutas para pasar más sencillo el nivel y a los 3 fallos les manda a la escena de perder.
+
+Para lograr esto se necesita tener un archivo de codigo por fuera que recolecte puntos, y los puntos en contra también para imprimirlos en un TextMeshPro en el Canvas.
+
+El timescale es para pausar la partida cuando pierdas y ganes, eso evita que te muevas durante.
+Recuerda siempre importan las librerías de Photon.Pun cuando quieras usar una función de Photon y llamar a MonoBehaviourPunCallbacks.
+
+Esta es la primera vez en este proyecto que añadimos un SceneManagement, así que antes de salirnos de cualquier partida debemos dejar la sala multijugador con LeaveRoom(), el nombre de la escena a la que te quieres tele transportar debe tener el mismo nombre que en **Build > Scenes in Build**
+
+Este archivo se llamará ScoreScript.cs
+
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+    using UnityEngine.UI;
+    using TMPro;
+    using Photon.Pun;
+    using UnityEngine.SceneManagement;
+    public class ScoreScript : MonoBehaviourPunCallbacks
+    {
+    public static int scoreValue = 0;
+    public static int errorValue = 0;
+    TextMeshProUGUI score;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        score = GetComponent<TextMeshProUGUI>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(scoreValue != 240)
+        {
+            score.text = "Errores: " + errorValue + "  Puntos: " + scoreValue;
+        } else
+        {
+            Time.timeScale = 0;
+            Debug.Log("Has ganado");
+            PhotonNetwork.LeaveRoom();
+            SceneManager.LoadScene("Won");
+
+        }
+        if(errorValue == 3)
+        {
+            Time.timeScale = 0;
+            Debug.Log("Has perdido");
+            PhotonNetwork.LeaveRoom();
+            SceneManager.LoadScene("Lost");
+
+        }
+        
+    }
+}
+
+Después a las frutas y comida se le pone un trigger que cuando entre el jugador que tenga el tag **Player**, se activará el cuestionario y un audioclip de golpe que dirá "Meow" como un gato, agregando 10 puntos por fruta y por cuestionario resuelto 50.
+
+El AudioSource lo podemos agregar en un objeto vació en el **Hierarchy** como cuando agregamos la música de fondo de los niveles y teniendo la música .mp3 en la carpeta Assets, arrastrándolo a las opciones que habilitamos dentro de la fruta y arrastramos el Empty que es el que tiene el AudioSource.
+
+El archivo se llamara FrutaScript.cs
+
+![img](https://i.ibb.co/D9Tnx4v/bananascript.png)
+
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+    
+    public class BananaScript : MonoBehaviour
+    {
+        public GameObject Panel;
+        public AudioClip meow;
+        public AudioSource audioSource;
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.tag.Equals("Player"))
+            {
+                if(Panel != null)
+                {
+                    bool isActive = Panel.activeSelf;
+                    Panel.SetActive(true);
+                    audioSource.PlayOneShot(meow, 0.7F);
+                    ScoreScript.scoreValue += 10;
+                    Destroy(gameObject);
+                }
+            }
+        }
+    }
+
+Para terminar el juego, solo se le asigno en la escena final un script llamado End.cs:
+
+    Application.Quit();
+
 
 ## Justificación
 El proyecto se justifica por ser una herramienta de aprendizaje para niños que necesiten aprender matemáticas beneficiándose de escenarios virtuales para nada aburridos.
@@ -225,3 +390,5 @@ Egger, J., Gall, M., Wallner, J., Boechat, P., Hann, A., Li, X., ... & Schmalsti
 
 ## Licencia
 Entra a este [enlace](https://github.com/AcquaWh/VR-Multiplayer/blob/master/LICENSE) para ver la licencia del proyecto.
+
+
