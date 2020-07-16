@@ -73,7 +73,7 @@ El presente proyecto se desarrolló con la necesidad de hacer un videojuego en r
 - Mostrar paneles desplegables de textos que muestren los ejercicios que se deben resolver.
 
 ## Dispositivo
-
+Google Cardboard son unas gafas de realidad virtual que estan hechas con cartón plegable, que funciona al montar un celular con Android o iOS. Son unas gafas con el valor de 400 pesos mexicanos con la resolución de un celular en horizontal. Con estos lentes no necesitas una computadora de gaming ni tampoco una profesional, solo necesitas un celular y con eso basta.
 
 ## Desarrollo
 
