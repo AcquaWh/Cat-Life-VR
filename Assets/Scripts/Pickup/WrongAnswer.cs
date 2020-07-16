@@ -8,6 +8,7 @@ public class WrongAnswer : MonoBehaviour
     public AudioSource audioSource;
     public void Wrong()
     {
-        audioSource.PlayOneShot(wrong, 0.7F); 
+        audioSource.PlayOneShot(wrong, 0.7F);
+        ScoreScript.errorValue += 1;
     }
 }
