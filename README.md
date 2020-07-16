@@ -77,6 +77,47 @@ El presente proyecto se desarrolló con la necesidad de hacer un videojuego en r
 Google Cardboard son unas gafas de realidad virtual que estan hechas con cartón plegable, que funciona al montar un celular con Android o iOS. Son unas gafas con el valor de 400 pesos mexicanos con la resolución de un celular en horizontal. Con estos lentes no necesitas una computadora de gaming ni tampoco una profesional, solo necesitas un celular y con eso basta.
 
 ## Desarrollo
+### Herramientas necesarias para el desarrollo
+Para poder desarollar y aprender a utilizar este proyecto con Unity necesitamos cumplir al menos los requisitos mínimos que cumplir a nivel de hardware, sobre todo nuestro celular.
+- Disposito Android con sistema operativo Android 7.0 o mayor.
+- Unas gafas cardboard.
+- Motor gráfico Unity 3D en su versión (2019.3.0f6).
+- Extensiones de Unity3D, GoogleVR.
+
+### Instalaciones
+Comprobaremos las versiones de nuestros dispositivos, programas y preparación de todos los entornos para una posterior realización del proyecto de videojuego en realidad virtual.
+### Celular
+Primero deberemos de comprobar la versión de nuestro dispositivo móvil para ello tenemos que acceder a la siguiente ruta:
+
+Ajustes/ Acerca del dispositivo/ Información del software
+
+![android](https://i.ibb.co/1smzQJJ/ex1.png)
+
+Como se observa en la imagen la versión de nuestro dispositivo Android es la 7.0.
+
+Debido a compatibilidades con las librerías de Google VR nuestro dispositivo debe de tener dicha versión como mínimo para poder hacer uso de las funcionalidades que vernos en la guía. Una vez comprobada la versión de nuestro dispositivo deberemos de instalar desde la PlayStore la aplicación Servicios RV de Google, esta aplicación de Google nos proporciona las herramientas necesarias para poder dar, entre otras, un soporte desde Unity3D a nuestro móvil y poder realizar pruebas en vivo de nuestro desarrollo mediante la conexión con un cable USB desde nuestro dispositivo móvil hasta nuestro PC.
+
+![vr](https://i.ibb.co/J5W1CJB/vr.png)
+
+### Cardboard
+Aunque no necesario, para poder obtener una experiencia más auténtica de esta tecnología poseer unas cartonglass ayudará a conseguir una inmersión en nuestro proyecto más realista.
+
+### Dispositivo de control bluetooth
+Como dispostivo de control utilizaremos otro smartphone que simulara un control de las gafas Daydream de Google.
+
+
+
+
+
+### Configuración de proyecto en Unity
+Se empezo un proyecto nuevo en 3D en Unity (versión 2019.3.0f6) en donde se importaron los paquetes de GoogleVR desde este [enlace](https://developers.google.com/vr/develop/unity/get-started-android) en la carpeta de Assets.
+
+Se crearon las primeras escena, en la que vendra el menu y la sala multijugador.
+
+Utilizando la tienda de assets de Unity ([enlace](https://assetstore.unity.com/)) se descargaron los primeros recursos que fueron las frutas en 3D y el gato que se ve en escena.
+
+Desde los prefabs (objeto reutilizable) de GoogleVR, arrastrar al prefab llamado Player en el Hierarchy de la escena "Menu" que se hizo.
+
 
 
 ## Justificación
