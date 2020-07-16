@@ -9,6 +9,7 @@ public class ScoreScript : MonoBehaviour
     public static int scoreValue = 0;
     public static int errorValue = 0;
     TextMeshProUGUI score;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,17 @@ public class ScoreScript : MonoBehaviour
             score.text = "Errores: " + errorValue + "  Puntos: " + scoreValue;
         } else
         {
+            Time.timeScale = 0;
             Debug.Log("Has ganado");
+            SceneManager.LoadScene("Won");
+
+        }
+        if(errorValue == 3)
+        {
+            Time.timeScale = 0;
+            Debug.Log("Has perdido");
+            SceneManager.LoadScene("Lost");
+
         }
         
     }
