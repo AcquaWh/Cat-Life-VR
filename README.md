@@ -29,7 +29,7 @@ Clona el repositorio de GitHub en cualquier carpeta dentro de tu computadora
 
     git clone https://github.com/AcquaWh/Cat-Life-VR.git
     
-- Descarga el archivo apk en este [enlace](https://github.com/AcquaWh/Cat-Life-VR/releases/tag/0.1) para instalarlo en tu celular Android.
+- Descarga el archivo apk en este [enlace](https://github.com/AcquaWh/Cat-Life-VR/releases/tag/v1.0) para instalarlo en tu celular Android.
 - Entra en tu celular a Ajustes > seguridad > orígenes desconocidos y actívala.
 - Abre el **APK** que descargaste en tu celular y acepta todos los pasos.
 - Estará listo para iniciar el juego.
