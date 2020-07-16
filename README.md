@@ -223,6 +223,17 @@ Este archivo se llamará ConnectionPhoton.cs
         
 Para hacer la función de conectar a un servidor multijugador se tiene que correr este código que lo que hace es revisar si el usuario esta conectado, si no, en el Texto llamado Log despliega un error o alerta.
 
+El JoinRandom() es para conectarte a una sala multijugador, si no tuviste éxito el **Canvas** te despliega un mensaje de que fallaste en unirte.
+
+El OnJoinnedRoom despliega el mensaje de que todo salio bien al unirte y el OnJoinRandomFailer es que no encontraste una sala para unirte, tu mismo creas tu propia sala.
+
+El FixedUpdate() es para verificar cuantos usuarios hay conectados actualmente en tu sala y muestra en el Canvas un texto con el número de jugadores que van y el máximo.
+
+Cuando es OnConnectedToMaster es que esta actualmente conectándose a un servidor en el proceso.
+
+El LoadMap() es para cargar el nivel con PhotonNetwork según el nombre de la escena que le asignaste y te lleva a la siguiente.
+
+
     public void Connect()
     {
         if (!PhotonNetwork.IsConnected)
@@ -235,6 +246,54 @@ Para hacer la función de conectar a un servidor multijugador se tiene que corre
                 Log.text = "Failing Connecting to Server";
             }
         }
+    }
+
+
+    public override void OnConnectedToMaster()
+    {
+        ConnectButton.interactable = false;
+        JoinRandomButton.interactable = true;
+    }
+    public void JoinRandom()
+    {
+        if (!PhotonNetwork.JoinRandomRoom())
+        {
+            Log.text = "Fail Joining";
+        }
+    }
+
+    public override void OnJoinRandomFailed(short returnCode, string message)
+    {
+        Log.text = "No Rooms to Join, creating one...";
+        if(PhotonNetwork.CreateRoom(null, new Photon.Realtime.RoomOptions() { MaxPlayers = maxPlayersPerRoom }))
+        {
+            Log.text = "Room Created";
+        } else
+        {
+            Log.text = "Fail Creating Room";
+        }
+    }
+    public override void OnJoinedRoom()
+    {
+        Log.text = "Joinned";
+        JoinRandomButton.interactable = false;
+    }
+    private void FixedUpdate()
+    {
+        if(PhotonNetwork.CurrentRoom != null)
+
+            playersCount = PhotonNetwork.CurrentRoom.PlayerCount;
+            PlayerCount.text = playersCount + "/" + maxPlayersPerRoom;
+
+        if(IsLoading == false && playersCount >= minPlayersPerRoom)
+        {
+            LoadMap();
+        }
+    }
+    private void LoadMap()
+    {
+        IsLoading = true;
+        PhotonNetwork.LoadLevel("Game");
     }
 
 ### Caminar con la cámara
