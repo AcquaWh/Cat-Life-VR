@@ -11,6 +11,7 @@
 - [Alcance](#alcance)
 - [Dispositivo](#dispositivo)
 - [Desarrollo](#desarrollo)
+- [Justificación](#justificación)
 - [Licencia](#licencia)
 - [Conclusión](#conclusión)
 - [Licencia](#licencia)
