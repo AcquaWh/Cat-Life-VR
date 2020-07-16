@@ -69,6 +69,9 @@ El presente proyecto se desarrolló con la necesidad de hacer un videojuego en r
 - Crear diferentes escenas para el inicio (el menu) con sus instrucciones de jugabilidad, la sala de juego multijugador y las escenas si perdiste o ganaste.
 - Mostrar paneles desplegables de textos que muestren los ejercicios que se deben resolver.
 
+## Dispositivo
+
+
 ## Desarrollo
 
 
