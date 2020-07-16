@@ -157,13 +157,39 @@ Se crearon las escenas, en la que vendrá el menú, la sala multijugador, cuando
 
 Utilizando la tienda de assets de Unity ([enlace](https://assetstore.unity.com/)) se descargaron los primeros recursos que fueron las frutas en 3D y el gato que se ve en escena.
 
-Desde la escena de HelloWorld de GoogleVR, copiar los archivos importantes del Player y sus controladores de la cámara en el Hierarchy de la escena **Menú** que se creo con anterioridad.
+Desde la escena de **HelloWorld** de GoogleVR, copiar los archivos importantes del Player y sus controladores de la cámara en el **Hierarchy** de la escena **Menú** que se creo con anterioridad.
 
 ![img](https://i.ibb.co/XDSJ7KD/scenes.png)
 
 Se creo un escenario en Maya 2019 donde se reutilizara un escenario que ya tenia en la librería y solamente le cambie los cuadros a gatos entre otros ajustes de color a la escena. Cambiando de color el directional light.
 
 ![img](https://i.ibb.co/X5ZxmRV/scene.png)
+
+Se descargo un skybox, después se le agrego movimiento en las nubes y en las estrellas para armar una escena perfecta.
+
+![img](https://i.ibb.co/mtpj8Hr/skybox.png)
+
+Después comenzaron se comenzaron a crear los paneles UI con TextMeshPro, se le agregaron distintas funciones para configurar el Photon para que sea multijugador. Dandole click derecho al **Hierarchy** salen diferentes opciones como lo muestra la siguiente imagen.
+
+Click derecho > UI > Panel > Text- TextMesh Pro 
+
+Este canvas será utilizado como nuestro HUD que almacenará aquellas imágenes o textos que utilicemos par nuestro HUD.
+
+![img](https://i.ibb.co/BfTLrc1/ui.png)
+
+
+![img](https://i.ibb.co/0J5xPhV/ui.png)
+
+Ponemos el canvas junto al sistema de coordenadas de la main camera para  que los paneles se vean en el escenario. Para ello cambiamos dentro de las opciones de canvas a WorldSpace: Canvas -> Render Mode -> World Space
+
+![img](https://i.ibb.co/BfTLrc1/ui.png)
+
+Para insertar las frutas dentro de los botones de la UI del canvas es:
+UI > Image
+Importamos una imagen en el panel de la derecha que sea un Sprite 2D en Source Image.
+
+![img](https://i.ibb.co/c30RpJd/banana.png)
+
 
 ## Justificación
 El proyecto se justifica por ser una herramienta de aprendizaje para niños que necesiten aprender matemáticas beneficiándose de escenarios virtuales para nada aburridos.
