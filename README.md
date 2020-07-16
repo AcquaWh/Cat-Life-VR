@@ -95,11 +95,19 @@ Ajustes/ Acerca del dispositivo/ Información del software
 
 Como se observa en la imagen la versión de nuestro dispositivo Android es la 7.0.
 
-Debido a compatibilidades con las librerías de Google VR nuestro dispositivo debe de tener dicha versión como mínimo para poder hacer uso de las funcionalidades que
-vernos en la guía. Una vez comprobada la versión de nuestro dispositivo deberemos de instalar desde la PlayStore la aplicación Servicios RV de Google, esta aplicación de Google nos proporciona las herramientas necesarias para poder dar, entre otras, un soporte desde Unity3D a nuestro móvil y poder realizar pruebas en vivo de nuestro desarrollo
-mediante la conexión con un cable USB desde nuestro dispositivo móvil hasta nuestro PC.
+Debido a compatibilidades con las librerías de Google VR nuestro dispositivo debe de tener dicha versión como mínimo para poder hacer uso de las funcionalidades que vernos en la guía. Una vez comprobada la versión de nuestro dispositivo deberemos de instalar desde la PlayStore la aplicación Servicios RV de Google, esta aplicación de Google nos proporciona las herramientas necesarias para poder dar, entre otras, un soporte desde Unity3D a nuestro móvil y poder realizar pruebas en vivo de nuestro desarrollo mediante la conexión con un cable USB desde nuestro dispositivo móvil hasta nuestro PC.
 
 ![vr](https://i.ibb.co/J5W1CJB/vr.png)
+
+### Cardboard
+Aunque no necesario, para poder obtener una experiencia más auténtica de esta tecnología poseer unas cartonglass ayudará a conseguir una inmersión en nuestro proyecto más realista.
+
+### Dispositivo de control bluetooth
+Como dispostivo de control utilizaremos otro smartphone que simulara un control de las gafas Daydream de Google.
+
+
+
+
 
 
 Se empezo un proyecto nuevo en 3D en Unity (versión 2019.3.0f6) en donde se importaron los paquetes de GoogleVR desde este [enlace](https://developers.google.com/vr/develop/unity/get-started-android) en la carpeta de Assets.
