@@ -55,9 +55,6 @@ El presente trabajo propone presentar el desarrollo de un videojuego educativo e
 
 ## Desarrollo
 
-## Licencia
-Entra a este [enlace](https://github.com/AcquaWh/VR-Multiplayer/blob/master/LICENSE) para ver la licencia del proyecto.
-
 ## Conclusión
 Después de tener varias semanas trabajando en el proyecto de Cat Life VR, pude reforzar los conocimientos previos que ya habia aprendido en clase de Realidad Virtual 2 y obligarme a investigar más tecnicas de otras formas para conectarte en línea por medio de Photon 2.
 
@@ -72,3 +69,6 @@ Yoo, S., & Parker, C. (2015, August). Controller-less interaction methods for Go
 MacIsaac, D. (Ed.). (2015). Google Cardboard: A virtual reality headset for $10?. The Physics Teacher, 53(2), 125-125.
 
 Etxeberría, F. (2001). Videojuegos y educación.
+
+## Licencia
+Entra a este [enlace](https://github.com/AcquaWh/VR-Multiplayer/blob/master/LICENSE) para ver la licencia del proyecto.
