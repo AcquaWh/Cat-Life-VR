@@ -61,8 +61,6 @@ public class PlayerController : MonoBehaviourPunCallbacks
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
         */
-        
     }
- 
     Vector3 axis { get => new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical")); }
 }
