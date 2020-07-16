@@ -138,6 +138,7 @@ Se empezó un proyecto nuevo en 3D en Unity (versión 2019.3.0f6) en donde se im
 
 ### Configuración de opciones de construcción y opciones de jugador
 Selecciona File > Build Settings
+
 ![img](https://i.ibb.co/LNYHpFW/img2.png)
 
 Selecciona Android y haz click en **Swith Platform,**
@@ -150,14 +151,19 @@ Una vez configurados estos parámetros ya tendremos preparado el proyecto con to
 
 ### Procesos de programación
 
+Se crearon las escenas, en la que vendrá el menú, la sala multijugador, cuando pierdes y ganas.
 
-Se crearon las primeras escenas, en la que vendrá el menú y la sala multijugador.
+![img](https://i.ibb.co/DbCsVFq/scenes.png)
 
 Utilizando la tienda de assets de Unity ([enlace](https://assetstore.unity.com/)) se descargaron los primeros recursos que fueron las frutas en 3D y el gato que se ve en escena.
 
-Desde los prefabs (objeto re utilizable) de GoogleVR, arrastrar al prefab llamado Player en el Hierarchy de la escena "Menú" que se hizo.
+Desde la escena de HelloWorld de GoogleVR, copiar los archivos importantes del Player y sus controladores de la cámara en el Hierarchy de la escena **Menú** que se creo con anterioridad.
 
+![img](https://i.ibb.co/XDSJ7KD/scenes.png)
 
+Se creo un escenario en Maya 2019 donde se reutilizara un escenario que ya tenia en la librería y solamente le cambie los cuadros a gatos entre otros ajustes de color a la escena. Cambiando de color el directional light.
+
+![img](https://i.ibb.co/X5ZxmRV/scene.png)
 
 ## Justificación
 El proyecto se justifica por ser una herramienta de aprendizaje para niños que necesiten aprender matemáticas beneficiándose de escenarios virtuales para nada aburridos.
