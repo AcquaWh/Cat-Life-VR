@@ -83,7 +83,7 @@ Después de tener varias semanas trabajando en el proyecto de Cat Life VR, pude 
 - El costo de las gafas de realidad virtual Google Cardboard es absurdamente barato a diferencia de otros dispositivos como el Oculus rift entre otros, así que no tuve que gastar.
 - Se logro trabajar con distintos recursos que tienen licencia gratis de uso, yo lo tuve que implementar en el proyecto y modificar varios materiales.
 
-## Referencias APA
+## Referencias
 Yoo, S., & Parker, C. (2015, August). Controller-less interaction methods for Google cardboard. In Proceedings of the 3rd ACM Symposium on Spatial User Interaction (pp. 127-127).
 
 MacIsaac, D. (Ed.). (2015). Google Cardboard: A virtual reality headset for $10?. The Physics Teacher, 53(2), 125-125.
