@@ -40,6 +40,8 @@ Clona el repositorio de GitHub en cualquier carpeta dentro de tu computadora
 ## Introducción
 La aplicación de nuevas tecnologías dentro de las escuelas y universidades se esta haciendo más habitual, más ahora por la situación que nuestro mundo esta logrando superar haciendo referencia al COVID19. Ya existen herramientas como Zoom, Skype, Discord entre otras para mantenerte comunicado en el ambito laboral y estudiantil sin estar presencialmente dentro de las instalaciones de tu empresa y universidad.
 
+Cuando estaba en el Kinder hasta la primaria inferior en mi escuela La Salle habia un juego educativo que nos ponian en el area de computación que era 2D y tenias que resolver distintos puzzles como resolver una ecuación matematica basica, sumar, restar, multiplicar y dividir. También ese juego nos ponian a leer hasta escribir, este juego lo tenia todo y desde ese entonces fue que me llamaron la atención los videojuegos y su creación. De esa idea fue con la que me inspire para desarrollar mi proyecto.
+
 Con el paso del tiempo, se ha incrementado en las computadoras la velocidad de procesamiento, con mayor capacidad de gráficos y de reproducción de sonido. Esto ha
 permitido que muy recientemente la tecnología de realidad virtual pueda utilizarse en el proceso enseñanza-aprendizaje, ya que requiere de cierta velocidad de procesamiento en
 una PC, respetable cantidad de memoria y una tarjeta de video con aceleración gráfica.
