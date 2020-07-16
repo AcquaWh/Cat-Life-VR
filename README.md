@@ -14,7 +14,7 @@
 - [Licencia](#licencia)
 - [Conclusión](#conclusión)
 - [Licencia](#licencia)
-- [Referencias APA](#referencias-apa)
+- [Referencias](#referencias)
 
 Cat Life VR es una simulación en realidad virtual que fue creada con Google Cardboard y Daydream en Unity. Este juego tiene un fin educativo para jovenes de kinder hasta primaria de un rango de edad de 3-11 años donde te enseñara a sumar y restar con frutas. Los niños podran divertirse mientras estan en su salón de clase virtual y aprender al mismo tiempo.
 
