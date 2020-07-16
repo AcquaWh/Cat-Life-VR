@@ -77,7 +77,11 @@ El presente proyecto se desarrolló con la necesidad de hacer un videojuego en r
 Google Cardboard son unas gafas de realidad virtual que estan hechas con cartón plegable, que funciona al montar un celular con Android o iOS. Son unas gafas con el valor de 400 pesos mexicanos con la resolución de un celular en horizontal. Con estos lentes no necesitas una computadora de gaming ni tampoco una profesional, solo necesitas un celular y con eso basta.
 
 ## Desarrollo
-Se empezo un proyecto nuevo en 3D en Unity 2019.3.0f6 Personal en donde se importaron los paquetes de GoogleVR desde este [enlace](https://developers.google.com/vr/develop/unity/get-started-android) en la carpeta de Assets.
+- Se empezo un proyecto nuevo en 3D en Unity (versión 2019.3.0f6) en donde se importaron los paquetes de GoogleVR desde este [enlace](https://developers.google.com/vr/develop/unity/get-started-android) en la carpeta de Assets.
+
+- Se crearon las primeras escena, en la que vendra el menu y la sala multijugador.
+
+- Utilizando la tienda de assets de Unity [enlace](https://assetstore.unity.com/) se descargaron los primeros recursos que fueron las frutas en 3D y el gato que se ve en escena.
 
 
 
