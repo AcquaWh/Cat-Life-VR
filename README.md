@@ -78,6 +78,13 @@ Google Cardboard son unas gafas de realidad virtual que estan hechas con cartón
 ## Desarrollo
 
 
+## Justificación
+El proyecto se justifica por ser una herramienta de aprendizaje para niños que necesiten aprender matematicas beneficiandose de escenarios virtuales para nada aburridos.
+Desde el punto de vista tecnológico, se empleó herramientas actuales para el desarrollo, como ser Unity 3d como procesador de gráficos en 3D y la aplicación será desarrollada para la plataforma Android. 
+
+SDK Android para Unity nos permitió integrar Android con el gestor Unity 3D. Se utiliza además del visor CardBoard el cual fue lanzado por Google el 2014, como una herramienta
+a bajo costo para lograr una realidad virtual en la aplicación.
+
 ## Conclusión
 Después de tener varias semanas trabajando en el proyecto de Cat Life VR, pude reforzar los conocimientos previos que ya habia aprendido en clase de Realidad Virtual 2 y obligarme a investigar más tecnicas de otras formas para conectarte en línea por medio de Photon 2.
 
