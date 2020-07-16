@@ -88,7 +88,9 @@ Para poder desarollar y aprender a utilizar este proyecto con Unity necesitamos 
 Comprobaremos las versiones de nuestros dispositivos, programas y preparación de todos los entornos para una posterior realización del proyecto de videojuego en realidad virtual.
 ### Celular
 Primero deberemos de comprobar la versión de nuestro dispositivo móvil para ello tenemos que acceder a la siguiente ruta:
+
 Ajustes/ Acerca del dispositivo/ Información del software
+
 ![android](https://i.ibb.co/1smzQJJ/ex1.png)
 
 Se empezo un proyecto nuevo en 3D en Unity (versión 2019.3.0f6) en donde se importaron los paquetes de GoogleVR desde este [enlace](https://developers.google.com/vr/develop/unity/get-started-android) en la carpeta de Assets.
