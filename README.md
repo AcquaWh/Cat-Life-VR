@@ -87,5 +87,15 @@ MacIsaac, D. (Ed.). (2015). Google Cardboard: A virtual reality headset for $10?
 
 Etxeberría, F. (2001). Videojuegos y educación.
 
+Vera-Muñoz, M. I., & Espinosa Brilla, D. (2001). Efectos de los videojuegos y de la realidad virtual en los valores.
+
+Keene, S. (2018). Google Daydream VR Cookbook: Building Games and Apps with Google Daydream and Unity. Addison-Wesley Professional.
+
+LaValle, S. M., Yershova, A., Katsev, M., & Antonov, M. (2014, May). Head tracking for the Oculus Rift. In 2014 IEEE International Conference on Robotics and Automation (ICRA) (pp. 187-194). IEEE.
+
+Psotka, J. (1995). Immersive training systems: Virtual reality and education and training. Instructional science, 23(5-6), 405-431.
+
+Egger, J., Gall, M., Wallner, J., Boechat, P., Hann, A., Li, X., ... & Schmalstieg, D. (2017). HTC Vive MeVisLab integration via OpenVR for medical applications. PloS one, 12(3), e0173972.
+
 ## Licencia
 Entra a este [enlace](https://github.com/AcquaWh/VR-Multiplayer/blob/master/LICENSE) para ver la licencia del proyecto.
