@@ -32,17 +32,17 @@ Clona el repositorio de GitHub en cualquier carpeta dentro de tu computadora
 
 ## Paquetes instalados
 
-### GoogleVR
-
-### Photon 2
-
-### Post Processing
-
-### Lightweight RP
+- GoogleVR
+- Photon 2
+- Post Processing
+- Lightweight RP
 
 ## Introducción
+La aplicación de nuevas tecnologías dentro de las escuelas y universidades se esta haciendo más habitual, más ahora por la situación que nuestro mundo esta logrando superar haciendo referencia al COVID19. Ya existen herramientas como Zoom, Skype, Discord entre otras para mantenerte comunicado en el ambito laboral y estudiantil sin estar presencialmente dentro de las instalaciones de tu empresa y universidad.
+
 
 ## Objetivo
+
 
 ## Desarrollo
 
@@ -50,5 +50,11 @@ Clona el repositorio de GitHub en cualquier carpeta dentro de tu computadora
 Entra a este [enlace](https://github.com/AcquaWh/VR-Multiplayer/blob/master/LICENSE) para ver la licencia del proyecto.
 
 ## Conclusión
+Después de tener varias semanas trabajando en el proyecto de Cat Life VR, pude reforzar los conocimientos previos que ya habia aprendido en clase de Realidad Virtual 2 
 
 ## Referencias APA
+Yoo, S., & Parker, C. (2015, August). Controller-less interaction methods for Google cardboard. In Proceedings of the 3rd ACM Symposium on Spatial User Interaction (pp. 127-127).
+
+MacIsaac, D. (Ed.). (2015). Google Cardboard: A virtual reality headset for $10?. The Physics Teacher, 53(2), 125-125.
+
+Etxeberría, F. (2001). Videojuegos y educación.
