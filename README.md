@@ -84,13 +84,17 @@ Para poder desarollar y aprender a utilizar este proyecto con Unity necesitamos 
 - Motor gráfico Unity 3D en su versión (2019.3.0f6).
 - Extensiones de Unity3D, GoogleVR.
 
-- Se empezo un proyecto nuevo en 3D en Unity (versión 2019.3.0f6) en donde se importaron los paquetes de GoogleVR desde este [enlace](https://developers.google.com/vr/develop/unity/get-started-android) en la carpeta de Assets.
+### Instalaciones
+Comprobaremos las versiones de nuestros dispositivos, programas y preparación de todos los entornos para una posterior realización del proyecto de videojuego en realidad virtual.
+### Celular
+Primero deberemos de comprobar la versión de nuestro dispositivo móvil para ello tenemos que acceder a la siguiente ruta:
+Ajustes/ Acerca del dispositivo/ Información del software
+![android](https://i.ibb.co/1smzQJJ/ex1.png)
 
-- Se crearon las primeras escena, en la que vendra el menu y la sala multijugador.
-
-- Utilizando la tienda de assets de Unity ([enlace](https://assetstore.unity.com/)) se descargaron los primeros recursos que fueron las frutas en 3D y el gato que se ve en escena.
-
-- Desde los prefabs (objeto reutilizable) de GoogleVR, arrastrar al prefab llamado Player en el Hierarchy de la escena "Menu" que se hizo.
+Se empezo un proyecto nuevo en 3D en Unity (versión 2019.3.0f6) en donde se importaron los paquetes de GoogleVR desde este [enlace](https://developers.google.com/vr/develop/unity/get-started-android) en la carpeta de Assets.
+Se crearon las primeras escena, en la que vendra el menu y la sala multijugador.
+Utilizando la tienda de assets de Unity ([enlace](https://assetstore.unity.com/)) se descargaron los primeros recursos que fueron las frutas en 3D y el gato que se ve en escena.
+Desde los prefabs (objeto reutilizable) de GoogleVR, arrastrar al prefab llamado Player en el Hierarchy de la escena "Menu" que se hizo.
 
 
 
