@@ -48,7 +48,7 @@ Google en su presentación anual de Google I/O 2014, presenta una caja de cartó
 objetivo desarrollar la realidad virtual (VR) herramientas de bajo costo para que todos puedan disfrutar VR de manera sencilla, divertida y natural, es tanto así que uno mismo
 puede construir estas gafas, el proceso de construcción de unas CardBoard puede resultar relativamente sencillo y se puede completar en unos 15 o 20 minutos.
 
-El presente trabajo propone presentar el desarrollo de un videojuego educativo en realidad virtual desarrollado con Google Cardboard, que pueda colaborar con la enseñanza en los kindergarden y primarias para que enseñen a los niños a sumar y restar con el fin de motivar a los alumnos a aprender de forma divertida aumentando su interes por la clase de matematicas.
+El presente trabajo propone presentar el desarrollo de un videojuego educativo en realidad virtual desarrollado con Google Cardboard, que pueda colaborar con la enseñanza en los kindergarden y primarias para que enseñen a los niños a sumar y restar con el fin de motivar a los alumnos a aprender de forma divertida aumentando su interes por la clase de matematicas con la ayuda de sus compañeros de clase.
 
 ## Objetivo
  
@@ -59,7 +59,12 @@ El presente trabajo propone presentar el desarrollo de un videojuego educativo e
 Entra a este [enlace](https://github.com/AcquaWh/VR-Multiplayer/blob/master/LICENSE) para ver la licencia del proyecto.
 
 ## Conclusión
-Después de tener varias semanas trabajando en el proyecto de Cat Life VR, pude reforzar los conocimientos previos que ya habia aprendido en clase de Realidad Virtual 2 
+Después de tener varias semanas trabajando en el proyecto de Cat Life VR, pude reforzar los conocimientos previos que ya habia aprendido en clase de Realidad Virtual 2 y obligarme a investigar más tecnicas de otras formas para conectarte en línea por medio de Photon 2.
+
+- El objetivo general fue cumplido ya que se realizo el juego con exito en realidad virtual con Google Cardboard usando la tecnología Photon Pun 2 para crear un servidor virtual para que los usuarios puedan jugar al mismo tiempo en una misma red.
+- El sistema de multijugador puede llegar a ser complicado de implementar en proyectos de poco tiempo para desarrollar, así que tengo planeado investigar aun más sobre el tema de realidad virtual en multijugador.
+- El costo de las gafas de realidad virtual Google Cardboard es absurdamente barato a diferencia de otros dispositivos como el Oculus rift entre otros, así que no tuve que gastar.
+- Se logro trabajar con distintos recursos que tienen licencia gratis de uso, yo lo tuve que implementar en el proyecto y modificar varios materiales.
 
 ## Referencias APA
 Yoo, S., & Parker, C. (2015, August). Controller-less interaction methods for Google cardboard. In Proceedings of the 3rd ACM Symposium on Spatial User Interaction (pp. 127-127).
