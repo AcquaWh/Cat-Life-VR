@@ -53,7 +53,10 @@ puede construir estas gafas, el proceso de construcción de unas CardBoard puede
 El presente trabajo propone presentar el desarrollo de un videojuego educativo en realidad virtual desarrollado con Google Cardboard, que pueda colaborar con la enseñanza en los kindergarden y primarias para que enseñen a los niños a sumar y restar con el fin de motivar a los alumnos a aprender de forma divertida aumentando su interes por la clase de matematicas con la ayuda de sus compañeros de clase.
 
 ## Objetivo
- 
+Desarrollar un videojuego en realidad virtual para la clase de Realidad Virtual 2 con Google Cardboard usando el modo multijugador para que al menos entre 2-3 personas se conecten a la sala de juegos en línea.
+
+## Objetivos específicos
+
 
 ## Desarrollo
 
