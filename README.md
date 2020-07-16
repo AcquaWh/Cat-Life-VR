@@ -237,6 +237,60 @@ Para hacer la función de conectar a un servidor multijugador se tiene que corre
         }
     }
 
+### Caminar con la cámara
+Se necesita un controlador del jugador para que Photon identifique de quien es el que tu estas controlando en el juego con una validación llamada:
+
+     if (photonView.IsMine)
+     {
+	     cam.SetActive(true);
+     }
+Este script lo vamos a llamar PlayerController.cs y va en el Prefab del Player en Resources > PhotonPrefabs.
+
+Aquí necesitamos el valor de la velocidad a como se moverá, la cámara y la distancia en la que inclinaremos la cabeza hacia abajo para caminar. También llamamos la animación del gato de caminado.
+
+    void Update()
+        {
+            if (!photonView.IsMine) return;
+    
+            transform.Translate(Vector3.forward * axis.z * moveSpeed * Time.deltaTime);
+            transform.Rotate(Vector3.up * axis.x * rotSpeed * Time.deltaTime);
+    
+            if (vrCamera.eulerAngles.x >= toggleAngle && vrCamera.eulerAngles.x < 90.0f)
+            {
+                Vector3 forward2 = vrCamera.TransformDirection(Vector3.forward);
+                cc.SimpleMove(forward2 * moveSpeed);
+    
+                animacion.SetBool("walk", true);
+            } else
+            {
+                animacion.SetBool("walk", false);
+            }
+            /* 
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            }
+            */
+        }
+
+    Vector3 axis { get => new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical")); }
+
+También podemos movernos con las teclas WASD, y en el Start mandamos a llamar a el Animator para el gato y el character controller.
+
+    void Start()
+    {
+        cc = GetComponent<CharacterController>();
+        /*
+        rb = GetComponent<Rigidbody>();
+        col = GetComponent<CapsuleCollider>();
+        */
+
+        animacion = GetComponentInChildren<Animator>();
+        if (photonView.IsMine)
+        {
+            cam.SetActive(true);
+        }
+    }
 
 ### Escena multijugador
 Antes de todo se debe hacer un código en esta escena multijugador que haga aparecer al usuario con el player prefabricado, creando al jugador en esa escena. Se hizo un objeto vació y dentro como componente se creo un archivo llamado GameSetupController.cs
