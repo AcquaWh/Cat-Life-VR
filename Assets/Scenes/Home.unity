@@ -1943,7 +1943,7 @@ GameObject:
   - component: {fileID: 1566970094}
   - component: {fileID: 1566970093}
   m_Layer: 0
-  m_Name: Directional Light (1)
+  m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2682,7 +2682,7 @@ PrefabInstance:
     - target: {fileID: 568846245727411348, guid: 706a86c9351e2c046939b5996d238f39,
         type: 3}
       propertyPath: m_Constraints
-      value: 122
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 3775135681060481044, guid: 706a86c9351e2c046939b5996d238f39,
         type: 3}

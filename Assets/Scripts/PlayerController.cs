@@ -17,16 +17,19 @@ public class PlayerController : MonoBehaviourPunCallbacks
     float toggleAngle = 15.0f;
     public Animator animacion;
     private CharacterController cc;
-
+    /*
     public Rigidbody rb;
     public CapsuleCollider col;
     public float jumpForce = 7;
+    */
 
     void Start()
     {
         cc = GetComponent<CharacterController>();
+        /*
         rb = GetComponent<Rigidbody>();
         col = GetComponent<CapsuleCollider>();
+        */
 
         animacion = GetComponentInChildren<Animator>();
         if (photonView.IsMine)
@@ -52,12 +55,14 @@ public class PlayerController : MonoBehaviourPunCallbacks
         {
             animacion.SetBool("walk", false);
         }
-
+        /* 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
+        */
         
     }
+ 
     Vector3 axis { get => new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical")); }
 }
