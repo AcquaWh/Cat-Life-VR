@@ -202,7 +202,7 @@ Dentro del archivo C# va a estar este código:
 El MonoBehauviour para hacer llamadas a Photon Pun y también usando la librería Photon.Pum y el TMPro para llamar a los TextMesh botones y textos.
 
 Este archivo se llamará ConnectionPhoton.cs
-
+```c#
     using System.Collections;
     using System.Collections.Generic;
     using UnityEngine;
@@ -220,7 +220,8 @@ Este archivo se llamará ConnectionPhoton.cs
         public byte maxPlayersPerRoom = 4;
         public byte minPlayersPerRoom = 2;
         private bool IsLoading = false;
-        
+```
+
 Para hacer la función de conectar a un servidor multijugador se tiene que correr este código que lo que hace es revisar si el usuario esta conectado, si no, en el Texto llamado Log despliega un error o alerta.
 
 El JoinRandom() es para conectarte a una sala multijugador, si no tuviste éxito el **Canvas** te despliega un mensaje de que fallaste en unirte.
@@ -233,7 +234,7 @@ Cuando es OnConnectedToMaster es que esta actualmente conectándose a un servido
 
 El LoadMap() es para cargar el nivel con PhotonNetwork según el nombre de la escena que le asignaste y te lleva a la siguiente.
 
-
+```c#
     public void Connect()
     {
         if (!PhotonNetwork.IsConnected)
@@ -295,18 +296,23 @@ El LoadMap() es para cargar el nivel con PhotonNetwork según el nombre de la es
         IsLoading = true;
         PhotonNetwork.LoadLevel("Game");
     }
+```
 
 ### Caminar con la cámara
 Se necesita un controlador del jugador para que Photon identifique de quien es el que tu estas controlando en el juego con una validación llamada:
 
+```c#
      if (photonView.IsMine)
      {
 	     cam.SetActive(true);
      }
+```
+
 Este script lo vamos a llamar PlayerController.cs y va en el Prefab del Player en Resources > PhotonPrefabs.
 
 Aquí necesitamos el valor de la velocidad a como se moverá, la cámara y la distancia en la que inclinaremos la cabeza hacia abajo para caminar. También llamamos la animación del gato de caminado.
 
+```c#
     void Update()
         {
             if (!photonView.IsMine) return;
@@ -333,9 +339,11 @@ Aquí necesitamos el valor de la velocidad a como se moverá, la cámara y la di
         }
 
     Vector3 axis { get => new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical")); }
+```
 
 También podemos movernos con las teclas WASD, y en el Start mandamos a llamar a el Animator para el gato y el character controller.
 
+```c#
     void Start()
     {
         cc = GetComponent<CharacterController>();
@@ -350,10 +358,12 @@ También podemos movernos con las teclas WASD, y en el Start mandamos a llamar a
             cam.SetActive(true);
         }
     }
+```
 
 ### Escena multijugador
 Antes de todo se debe hacer un código en esta escena multijugador que haga aparecer al usuario con el player prefabricado, creando al jugador en esa escena. Se hizo un objeto vació y dentro como componente se creo un archivo llamado GameSetupController.cs
 
+```c#
     using System.Collections;
     using System.Collections.Generic;
     using UnityEngine;
@@ -374,6 +384,7 @@ Antes de todo se debe hacer un código en esta escena multijugador que haga apar
             PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Player"), Vector3.zero, Quaternion.identity);
         }
     }
+```
 
 Los usuarios van juntando entre todos frutas para pasar más sencillo el nivel y a los 3 fallos les manda a la escena de perder.
 
@@ -386,6 +397,7 @@ Esta es la primera vez en este proyecto que añadimos un SceneManagement, así q
 
 Este archivo se llamará ScoreScript.cs
 
+```c#
     using System.Collections;
     using System.Collections.Generic;
     using UnityEngine;
@@ -430,6 +442,7 @@ Este archivo se llamará ScoreScript.cs
         
     }
 }
+```
 
 Después a las frutas y comida se le pone un trigger que cuando entre el jugador que tenga el tag **Player**, se activará el cuestionario y un audioclip de golpe que dirá "Meow" como un gato, agregando 10 puntos por fruta y por cuestionario resuelto 50.
 
@@ -439,6 +452,7 @@ El archivo se llamara FrutaScript.cs
 
 ![img](https://i.ibb.co/D9Tnx4v/bananascript.png)
 
+```c#
     using System.Collections;
     using System.Collections.Generic;
     using UnityEngine;
@@ -463,11 +477,13 @@ El archivo se llamara FrutaScript.cs
             }
         }
     }
+```
 
 Para terminar el juego, solo se le asigno en la escena final un script llamado End.cs:
 
+```c#
     Application.Quit();
-
+```
 
 ## Justificación
 El proyecto se justifica por ser una herramienta de aprendizaje para niños que necesiten aprender matemáticas beneficiándose de escenarios virtuales para nada aburridos.
