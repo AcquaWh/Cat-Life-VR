@@ -55,8 +55,14 @@ El presente trabajo propone presentar el desarrollo de un videojuego educativo e
 ## Objetivo
 Desarrollar un videojuego en realidad virtual para la clase de Realidad Virtual 2 con Google Cardboard usando el modo multijugador para que al menos entre 2-3 personas se conecten a la sala de juegos en línea.
 
-## Objetivos específicos
-
+## Alcance
+El presente proyecto se desarrolló con la necesidad de hacer un videojuego en realidad virtual que pudiera conectarse con el metodo multijugador, es decir que se necesitó al menos un dispositivo movil con el sistema operativo Android y unas gafas de realidad virtual Cardboard para poder desarrollar este proyecto. El trabajo del presente proyecto fue definido dentro de los siguientes alcances:
+- Se tomo en cuenta que estamos en cuarentena por el virus de el COVID19 y no se podra mantener contacto con el profesor fisicamente para hacer pruebas con la aplicación.
+- Que la aplicación se conectara por el medio multijugador y que se comunicará entre dos cascos mínimo.
+- Resolver sumas basicas para niños de kinder-primaria inferior.
+- Que el personaje pudiera caminar y explorar la escena.
+- Crear diferentes escenas para el inicio (el menu) con sus instrucciones de jugabilidad, la sala de juego multijugador y las escenas si perdiste o ganaste.
+- Mostrar paneles desplegables de textos que muestren los ejercicios que se deben resolver.
 
 ## Desarrollo
 
