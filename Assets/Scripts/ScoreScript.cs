@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Photon.Pun;
 using UnityEngine.SceneManagement;
-public class ScoreScript : MonoBehaviour
+public class ScoreScript : MonoBehaviourPunCallbacks
 {
     public static int scoreValue = 0;
     public static int errorValue = 0;
@@ -26,6 +27,7 @@ public class ScoreScript : MonoBehaviour
         {
             Time.timeScale = 0;
             Debug.Log("Has ganado");
+            PhotonNetwork.LeaveRoom();
             SceneManager.LoadScene("Won");
 
         }
@@ -33,6 +35,7 @@ public class ScoreScript : MonoBehaviour
         {
             Time.timeScale = 0;
             Debug.Log("Has perdido");
+            PhotonNetwork.LeaveRoom();
             SceneManager.LoadScene("Lost");
 
         }
